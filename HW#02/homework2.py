@@ -38,9 +38,9 @@ def seasons(month):
 
 
 def is_prime(n):
-    if 0 > n > 1000:
+    if n > 1000 or n < 1:
         return False
-    if n > 1:
+    if n >= 1:
         for i in range(2, n):
             if n % i == 0:
                 return False
@@ -48,8 +48,28 @@ def is_prime(n):
 
 
 if __name__ == '__main__':
-    arithmetic(3, 2, '/')
-    is_year_leap(1992)
-    square(4)
-    seasons(1)
-    print(is_prime(11))
+    # arithmetic(3, 2, '/')
+    # is_year_leap(1992)
+    # square(4)
+    # seasons(1)
+    # print(is_prime(1))
+
+    # i = 105
+    # while i >= 7:
+    #     print(i)
+    #     i -= 7
+
+    # while True:
+    #     line = input('>')
+    #     if line == 'done':
+    #         break
+    #     print(line)
+    # print('Done!')
+
+    # for i in range(10, 301, 10):
+    #     print(i)
+
+    n = int(input('Enter a number: '))
+
+    for i in range(1, 11):
+        print(n, "*", i, "=", n * i)
