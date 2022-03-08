@@ -13,11 +13,10 @@ def is_digit(n):
 
 # task 2
 def func(num):
-    sum = 0
     if num <= 1:
         return num
     else:
-        return num + func(num-1)
+        return num + func(num - 1)
 
 
 # Press the green button in the gutter to run the script.
