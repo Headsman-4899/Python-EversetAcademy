@@ -14,9 +14,10 @@ def is_digit(n):
 # task 2
 def func(num):
     sum = 0
-    for i in range(1, num+1):
-        sum += i
-    return sum
+    if num <= 1:
+        return num
+    else:
+        return num + func(num-1)
 
 
 # Press the green button in the gutter to run the script.
@@ -26,5 +27,5 @@ if __name__ == '__main__':
     task2 = func(10)
     print(task2)
 
-    product = lambda x,y: x*y
-    print(product(3, 5))
+    # product = lambda x,y: x*y
+    # print(product(3, 5))
