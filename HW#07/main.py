@@ -30,3 +30,4 @@ def delete_product(name):
 if __name__ == '__main__':
     update_products({"apples": 9.99, "bananas": 7.99, "mangoes": 17.99})
     get_all_products()
+
