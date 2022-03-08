@@ -5,10 +5,7 @@
 
 # task 1
 def is_digit(n):
-    if 0 <= n <= 9:
-        return True
-    else:
-        return False
+    return n.isdigit()
 
 
 # task 2
@@ -21,7 +18,7 @@ def func(num):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    task1 = is_digit(5)
+    task1 = is_digit('9')
     print(task1)
     task2 = func(10)
     print(task2)
