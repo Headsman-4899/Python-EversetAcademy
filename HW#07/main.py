@@ -6,7 +6,7 @@
 products = {"apples": 12.99, "oranges": 10.99}
 
 
-def get_product(name):
+def get_product_price(name):
     print(products[name])
 
 
@@ -18,8 +18,8 @@ def add_product(name, price):
     products[name] = price
 
 
-def update_product(name, price):
-    products.update({name: price})
+def update_products(new_products):
+    products.update(new_products)
 
 
 def delete_product(name):
@@ -28,6 +28,5 @@ def delete_product(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print(products)
-    delete_product("oranges")
+    update_products({"apples": 9.99, "bananas": 7.99, "mangoes": 17.99})
     get_all_products()
