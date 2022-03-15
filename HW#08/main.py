@@ -18,7 +18,7 @@ def func(num):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    task1 = is_digit('9')
+    task1 = is_digit('3')
     print(task1)
     task2 = func(10)
     print(task2)
