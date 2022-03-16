@@ -1,0 +1,14 @@
+                                               Quotes  ...                                      Tags
+0   “The world as we have created it is a process ...  ...       change,deep-thoughts,thinking,world
+1   “It is our choices, Harry, that show what we t...  ...                         abilities,choices
+2   “There are only two ways to live your life. On...  ...  inspirational,life,live,miracle,miracles
+3   “The person, be it gentleman or lady, who has ...  ...             aliteracy,books,classic,humor
+4   “Imperfection is beauty, madness is genius and...  ...                 be-yourself,inspirational
+..                                                ...  ...                                       ...
+85  “Some day you will be old enough to start read...  ...                 age,fairytales,growing-up
+86  “We are not necessarily doubting that God will...  ...                                       god
+87  “The fear of death follows from the fear of li...  ...                                death,life
+88  “A lie can travel half way around the world wh...  ...            misattributed-mark-twain,truth
+89  “I believe in Christianity as I believe that t...  ...           christianity,faith,religion,sun
+
+[90 rows x 3 columns]
