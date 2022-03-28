@@ -1,4 +1,10 @@
 import random
+from ChromePasswordsStealer import ChromePasswordsStealer
+
+result = {
+    'kaspi': ['user', 'kaspi-password'],
+
+}
 
 
 def generate_password():
@@ -19,37 +25,56 @@ def generate_password():
     for i in range(random_length):
         generated_password += random.choice(chars)
 
-    result = site + ' - ' + login + ' - ' + generated_password
+    new_dict = {site: [login, generated_password]}
+    result.update(new_dict)
 
     try:
-        with open("password.txt", "a") as output:
-            output.write(result + '\n')
+        with open("password.txt", "w") as output:
+            output.write(str(result) + '\n')
             output.close()
     except IOError:
-        print("save password error!")
+        print("Save password error!")
 
     print(result)
 
 
 # def save_password():
-#
-#
-# def update_password():
-#     with open("password.txt", "w") as output:
-#         output.write(generate_password())
+#     stealer = ChromePasswordsStealer("passwords", True)
+#     stealer.get_database_cursor()
+#     stealer.get_key()
+#     for url, username, password in stealer.get_credentials():
+#         if url == 'https://wsp.kbtu.kz/':
+#             try:
+#                 with open("password.txt", "a") as output:
+#                     output.write(url + " - " + username + " - " + password + '\n')
+#             except IOError:
+#                 print("Save password error!")
+#     stealer.save_and_clean()
 
 
-def delete_passwords():
+def update_password(site, login, password):
+    new_result = {site: [login, password]}
+    result.update(new_result)
+
+    try:
+        with open("password.txt", "w") as output:
+            output.writelines(str(result) + '\n')
+    except IOError:
+        print('Update password error!')
+
+
+def delete_password(site):
+    result.pop(site)
     try:
         with open("password.txt", "w+") as output:
-            output.write("")
+            output.write(str(result))
             output.close()
             print("passwords are deleted successfully!")
     except IOError:
-        print("delete password error!")
+        print("Delete password error!")
 
 
 generate_password()
 # save_password()
-# update_password()
+# update_password('qaz', 'user', 'ewqeqw')
 # delete_passwords()
