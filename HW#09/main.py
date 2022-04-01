@@ -11,7 +11,7 @@ class Triangle():
         return self.angle1 + self.angle2 + self.angle3 == 180
 
 
-my_triangle = Triangle(30, 60, 900)
+my_triangle = Triangle(30, 60, 90)
 
 print(my_triangle.number_of_sides)
 print(my_triangle.check_angles())

@@ -1,5 +1,5 @@
 import random
-from ChromePasswordsStealer import ChromePasswordsStealer
+# from ChromePasswordsStealer import ChromePasswordsStealer
 
 result = {
     'kaspi': ['user', 'kaspi-password'],
