@@ -2,9 +2,8 @@ import random
 # from ChromePasswordsStealer import ChromePasswordsStealer
 
 result = {
-    'kaspi': ['user', 'kaspi-password'],
-
-}
+    "kaspi": ["kaspi-user", "kaspi-password"]
+    }
 
 
 def generate_password():
@@ -25,8 +24,14 @@ def generate_password():
     for i in range(random_length):
         generated_password += random.choice(chars)
 
-    new_dict = {site: [login, generated_password]}
-    result.update(new_dict)
+    # try:
+    #     with open("password.txt", "r") as read_file:
+    #         new_result = read_file.read()
+    #         read_file.close()
+    # except IOError:
+    #     print("Read result error!")
+
+    result
 
     try:
         with open("password.txt", "w") as output:
@@ -74,7 +79,7 @@ def delete_password(site):
         print("Delete password error!")
 
 
-generate_password()
+# generate_password()
 # save_password()
 # update_password('qaz', 'user', 'ewqeqw')
-# delete_passwords()
+delete_password('wsx')
