@@ -72,18 +72,12 @@ def update(id):
     password = PasswordModel.query.filter_by(password_id=id).first()
     if request.method == 'POST':
         if password:
-            db.session.delete(password)
-            db.session.commit()
+            password.site = request.form['site']
+            password.login = request.form['login']
+            password.password = request.form['password']
 
-            site = request.form['site']
-            login = request.form['login']
-            password = request.form['password']
-            password = PasswordModel(password_id=id, site=site, login=login, password=password)
-
-            db.session.add(password)
-            db.session.commit()
-            return redirect(f'/data/{id}')
-        return f"Password with id = {id} Does nit exist"
+        db.session.commit()
+        return redirect('/data')
 
     return render_template('update.html', password=password)
 
